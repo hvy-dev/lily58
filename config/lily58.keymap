@@ -24,7 +24,7 @@
             bindings = <
 &kp ESCAPE      &kp N1  &kp N2  &kp N3            &kp N4  &kp N5                              &kp N6             &kp N7            &kp N8         &kp N9   &kp N0    &kp BACKSPACE
 &kp TAB         &kp Q   &kp W   &kp E             &kp R   &kp T                               &kp Y              &kp U             &kp I          &kp O    &kp P     &kp LEFT_BRACKET
-&kp CAPSLOCK    &kp A   &kp S   &kp D             &kp F   &kp G                               &kp H              &kp J             &kp K          &kp L    &kp SEMI  &kp SQT
+&mo 4           &kp A   &kp S   &kp D             &kp F   &kp G                               &kp H              &kp J             &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z   &kp X   &kp C             &kp V   &kp B      &kp LG(SPACE)    &trans  &kp N              &kp M             &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                                 &kp LEFT_COMMAND  &mo 1   &kp SPACE  &kp RETURN       &mo 2   &kp RIGHT_COMMAND  &kp LEFT_CONTROL  &kp RIGHT_ALT
             >;
@@ -32,11 +32,11 @@
 
         settings+media {
             bindings = <
-&kp GRAVE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV          &kp C_PLAY_PAUSE  &kp C_NEXT                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans             &trans           &kp UP_ARROW        &trans            &trans                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans             &kp LEFT_ARROW   &kp DOWN_ARROW      &kp RIGHT_ARROW   &trans                                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans             &trans           &trans              &trans            &trans               &mo 3               &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                               &kp LC(LEFT_ARROW)  &trans            &kp LC(RIGHT_ARROW)  &kp LC(UP_ARROW)    &trans  &trans  &trans  &trans
+&kp GRAVE         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV          &kp C_PLAY_PAUSE  &kp C_NEXT                            &trans  &trans  &trans  &trans          &trans          &trans
+&kp LC(UP_ARROW)  &trans             &trans           &kp UP_ARROW        &trans            &trans                                &trans  &trans  &trans  &trans          &trans          &trans
+&trans            &trans             &kp LEFT_ARROW   &kp DOWN_ARROW      &kp RIGHT_ARROW   &trans                                &trans  &trans  &trans  &trans          &kp UP_ARROW    &kp RIGHT_SHIFT
+&trans            &trans             &trans           &trans              &trans            &trans               &mo 3    &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                                                      &kp LC(LEFT_ARROW)  &trans            &kp LC(RIGHT_ARROW)  &none    &trans  &trans  &trans  &trans
             >;
         };
 
@@ -57,6 +57,16 @@
 &trans      &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        hotkeys {
+            bindings = <
+&kp LC(GRAVE)  &trans         &trans  &trans  &trans         &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans         &trans  &trans  &trans         &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &kp LA(LS(A))  &trans  &trans  &kp LA(LS(F))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans         &trans  &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };

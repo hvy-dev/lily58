@@ -22,30 +22,30 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE      &kp N1  &kp N2  &kp N3            &kp N4  &kp N5                              &kp N6             &kp N7            &kp N8         &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E             &kp R   &kp T                               &kp Y              &kp U             &kp I          &kp O    &kp P     &kp LEFT_BRACKET
-&mo 4           &kp A   &kp S   &kp D             &kp F   &kp G                               &kp H              &kp J             &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z   &kp X   &kp C             &kp V   &kp B      &kp LG(SPACE)    &trans  &kp N              &kp M             &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                &kp LEFT_COMMAND  &mo 1   &kp SPACE  &kp RETURN       &mo 2   &kp RIGHT_COMMAND  &kp LEFT_CONTROL  &kp RIGHT_ALT
+&kp ESCAPE      &kp N1  &kp N2  &kp N3            &kp N4  &kp N5                             &kp N6             &kp N7            &kp N8         &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB         &kp Q   &kp W   &kp E             &kp R   &kp T                              &kp Y              &kp U             &kp I          &kp O    &kp P     &kp LEFT_BRACKET
+&mo 4           &kp A   &kp S   &kp D             &kp F   &kp G                              &kp H              &kp J             &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C             &kp V   &kp B      &kp LG(SPACE)    &mo 5  &kp N              &kp M             &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                                &kp LEFT_COMMAND  &mo 1   &kp SPACE  &kp RETURN       &mo 2  &kp RIGHT_COMMAND  &kp LEFT_CONTROL  &kp RIGHT_ALT
             >;
         };
 
-        settings+media {
+        media {
             bindings = <
-&kp GRAVE         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV          &kp C_PLAY_PAUSE  &kp C_NEXT                            &trans  &trans  &trans  &trans          &trans          &trans
-&kp LC(UP_ARROW)  &trans             &trans           &kp UP_ARROW        &trans            &trans                                &trans  &trans  &trans  &trans          &trans          &trans
-&trans            &trans             &kp LEFT_ARROW   &kp DOWN_ARROW      &kp RIGHT_ARROW   &trans                                &trans  &trans  &trans  &trans          &kp UP_ARROW    &kp RIGHT_SHIFT
-&trans            &trans             &trans           &trans              &trans            &trans               &mo 3    &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                                                      &kp LC(LEFT_ARROW)  &trans            &kp LC(RIGHT_ARROW)  &none    &trans  &trans  &trans  &trans
+&kp GRAVE         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PREV          &kp C_PLAY_PAUSE  &kp C_NEXT                                   &trans  &trans          &trans          &trans           &trans           &trans
+&kp LC(UP_ARROW)  &trans             &trans           &kp UP_ARROW        &trans            &trans                                       &trans  &trans          &kp UP_ARROW    &trans           &trans           &trans
+&trans            &trans             &kp LEFT_ARROW   &kp DOWN_ARROW      &kp RIGHT_ARROW   &trans                                       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT  &trans
+&trans            &trans             &trans           &trans              &trans            &trans               &mo 3    &trans         &trans  &trans          &trans          &trans           &trans           &trans
+                                                      &kp LC(LEFT_ARROW)  &trans            &kp LC(RIGHT_ARROW)  &none    &kp RIGHT_ALT  &trans  &trans          &trans
             >;
         };
 
-        fn+symbols {
+        symbols {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &kp F7  &kp F8             &kp F9           &kp F10           &kp F11            &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT_BRACE     &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp MINUS          &kp EQUAL        &kp BACKSLASH     &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp RIGHT_BRACKET  &kp LESS_THAN    &kp GREATER_THAN  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans             &trans           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT_BRACE     &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp MINUS          &kp EQUAL        &kp BACKSLASH         &trans                 &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp RIGHT_BRACKET  &kp LESS_THAN    &kp GREATER_THAN      &trans                 &trans
                         &trans  &trans  &trans  &trans    &trans  &trans  &trans             &trans
             >;
         };
@@ -67,6 +67,16 @@
 &trans         &kp LA(LS(A))  &trans  &trans  &kp LA(LS(F))  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &trans         &trans  &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                       &trans  &trans         &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        f-row {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans   &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
